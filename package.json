@@ -10,7 +10,15 @@
     "algolia",
     "node"
   ],
-  "author": "@chrisdmacrae",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "repository": "github:chrisdmacrae/atomic-algolia",
+  "author": {
+    "name": "Chris D. Macrae",
+    "email": "hello@chrisdmacrae.com",
+    "url": "chrisdmacrae.com"
+  },
   "license": "ISC",
   "dependencies": {
     "algoliasearch": "^3.24.9",
