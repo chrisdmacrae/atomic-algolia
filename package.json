@@ -1,0 +1,20 @@
+{
+  "name": "atomic-algolia",
+  "version": "0.2.0",
+  "description": "An NPM script for running atomic updates to an Algolia index with a local JSON file",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algolia",
+    "node"
+  ],
+  "author": "@chrisdmacrae",
+  "license": "ISC",
+  "dependencies": {
+    "algoliasearch": "^3.24.9",
+    "chalk": "^2.3.0",
+    "dotenv": "^5.0.0"
+  }
+}
