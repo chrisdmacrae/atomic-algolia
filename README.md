@@ -2,9 +2,13 @@
 An NPM package for running atomic updates to an Algolia index
 
 ## How it works
-This package runs *atomic* updates to an Algolia Index from a local JSON file. **What does that mean?**
+This package runs *atomic* updates to an Algolia Index. **What does that mean?**
 
-Simply put, this package reads a local JSON file, and updates the *new* or *updated* records, while removing deleted records. It does this *all at once*, so your index is never out of sync, and you use the smallest amount of operations possible. *(Stay on that free plan as long as you can!)*
+Simply put, this package reads your local index, and updates the *new* or *updated* records, while removing deleted records.
+
+It does this *all at once*, so your index is never out of sync with your content, and you use the smallest amount of operations possible. 
+
+*(Stay on that free plan as long as you can!)*
 
 ## Installation
 To install this script, you must have [Node & NPM installed](https://nodejs.org/en/download/). Once installed, run the following command in your terminal:
@@ -16,7 +20,7 @@ npm install atomic-algolia
 ## Usage
 This package can be used in [NPM "scripts"](#npm-scripts) or in [Javascript Files](#javascript-files).
 
-It reads a local JSON file with an array of valid records. For example:
+It reads an array of objects or local JSON file with an array of valid records. For example:
 
 ```
 [
@@ -30,7 +34,7 @@ It reads a local JSON file with an array of valid records. For example:
 ### NPM Scripts
 To use this package in your [NPM scripts](https://docs.npmjs.com/misc/scripts), add the command to your script in `package.json`. 
 
-> Note, this package can only be used in NPM scripts to update a single index. To update multiple indices, create your own script by following the instructions in [Javascript Files](#javascript-files)
+> Note, this package can only be used in NPM scripts to update a single index from a local JSON file. To update multiple indices or pass in a Javascript object, create your own script by following the instructions in [Javascript Files](#javascript-files)
 
 
 E.g:
@@ -52,10 +56,40 @@ ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_ID={{ YOUR_ADMIN_ID }} ALGOLIA_IND
 ### Scripts
 To use this package in your own local script, require it in your file. E.g:
 
+#### Using with a local JSON file
+
 ```
 var atomicalgolia = require("atomic-algolia")
 var indexName = "example_index"
 var indexPath = "./index.json"
+var cb = function(error, result) {
+    if (err) throw error
+
+    console.log(result)
+}
+
+atomicalgolia(indexName, indexPath, cb)
+```
+
+Then call the script from your terminal as follows:
+
+```
+ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_ID={{ YOUR_ADMIN_ID }} YOUR_SCRIPT.js
+```
+
+#### Using with an Array of Objects
+
+```
+var atomicalgolia = require("atomic-algolia")
+var indexName = "example_index"
+
+var indexData = [
+    {
+        objectID: "1",
+        title: "An example record"
+    }
+]
+
 var cb = function(error, result) {
     if (err) throw error
 

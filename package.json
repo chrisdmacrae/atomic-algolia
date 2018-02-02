@@ -1,7 +1,7 @@
 {
   "name": "atomic-algolia",
   "version": "0.3.0",
-  "description": "An NPM script for running atomic updates to an Algolia index with a local JSON file",
+  "description": "An NPM package for running atomic updates to an Algolia index",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
