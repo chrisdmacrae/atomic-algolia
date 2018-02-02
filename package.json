@@ -1,6 +1,6 @@
 {
   "name": "atomic-algolia",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An NPM script for running atomic updates to an Algolia index with a local JSON file",
   "main": "lib/index.js",
   "scripts": {

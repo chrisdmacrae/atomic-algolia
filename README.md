@@ -43,24 +43,10 @@ E.g:
 ...
 ```
 
-Then create a `.env` file in the root of your project with the following content:
-
-```
-ALGOLIA_APP_ID={{ YOUR_APP_ID }}
-ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }}
-ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }}
-ALGOLIA_INDEX_PATH={{ YOUR_INDEX_PATH }}
-```
-
-`ALGOLIA_APP_ID`: the ID of the Algolia app instance that contains your index.
-`ALGOLIA_ADMIN_KEY`: the adminstrative key for the Algolia app instance that contains your index.
-`ALGOLIA_INDEX_NAME`: the name of the index you're updating
-`ALGOLIA_INDEX_PATH`: the relative path to your index file from the root of your project.
-
 Lastly, run your NPM command. E.g:
 
 ```
-npm run algolia
+ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_ID={{ YOUR_ADMIN_ID }} ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }} ALGOLIA_FILE_PATH={{ YOUR_FILE_PATH }} npm run algolia
 ```
 
 ### Scripts
@@ -79,12 +65,32 @@ var cb = function(error, result) {
 atomicalgolia(indexName, indexPath, cb)
 ```
 
-Then create a `.env` file in the root of your project with the following content:
+Then call the script from your terminal as follows:
+
+```
+ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_ID={{ YOUR_ADMIN_ID }} YOUR_SCRIPT.js
+```
+
+
+## Using a `.env` file
+A `.env` file can be added to the root of your project with the required environment variables. This way, you don't have to specify them in `package.json` or when running the command.
+
+Run the following command:
+
+```
+touch .env && open .env
+```
+
+Then paste in the following contents, and update the placeholder variable marked with braces `{{ }}`
 
 ```
 ALGOLIA_APP_ID={{ YOUR_APP_ID }}
 ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }}
+ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }}
+ALGOLIA_INDEX_PATH={{ YOUR_INDEX_PATH }}
 ```
 
 `ALGOLIA_APP_ID`: the ID of the Algolia app instance that contains your index.
 `ALGOLIA_ADMIN_KEY`: the adminstrative key for the Algolia app instance that contains your index.
+`ALGOLIA_INDEX_NAME`: the name of the index you're updating.
+`ALGOLIA_INDEX_PATH`: the relative path to your index file from the root of your project.
