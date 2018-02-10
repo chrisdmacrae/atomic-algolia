@@ -1,6 +1,6 @@
 {
   "name": "atomic-algolia",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "An NPM package for running atomic updates to an Algolia index",
   "main": "lib/index.js",
   "bin": "lib/index.js",
