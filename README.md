@@ -34,7 +34,7 @@ It reads an array of objects or local JSON file with an array of valid records. 
 ### NPM Scripts
 To use this package in your [NPM scripts](https://docs.npmjs.com/misc/scripts), add the command to your script in `package.json`. 
 
-> Note, this package can only be used in NPM scripts to update a single index from a local JSON file. To update multiple indices or pass in a Javascript object, create your own script by following the instructions in [Javascript Files](#javascript-files)
+> Note, this package can only be used in NPM scripts to update a single index from a local JSON file. To update multiple indices or pass in a Javascript object, create your own script by following the instructions in [Javascript Files](#scripts)
 
 
 E.g:
