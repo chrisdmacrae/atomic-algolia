@@ -121,7 +121,7 @@ Then paste in the following contents, and update the placeholder variable marked
 ALGOLIA_APP_ID={{ YOUR_APP_ID }}
 ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }}
 ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }}
-ALGOLIA_INDEX_PATH={{ YOUR_INDEX_PATH }}
+ALGOLIA_INDEX_FILE={{ YOUR_INDEX_FILE }}
 ```
 
 `ALGOLIA_APP_ID`: the ID of the Algolia app instance that contains your index.
