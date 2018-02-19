@@ -96,7 +96,7 @@ var cb = function(error, result) {
     console.log(result)
 }
 
-atomicalgolia(indexName, indexPath, cb)
+atomicalgolia(indexName, indexData, cb)
 ```
 
 Then call the script from your terminal as follows:
