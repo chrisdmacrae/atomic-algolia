@@ -1,8 +1,8 @@
 # Algolia Atomic
-An NPM package for running atomic updates to an Algolia index
+An NPM package for running atomic updates to Algolia indices
 
 ## How it works
-This package runs *atomic* updates to an Algolia Index. **What does that mean?**
+This package runs *atomic* updates to Algolia Indices. **What does that mean?**
 
 Simply put, this package reads your local index, and updates the *new* or *updated* records, while removing deleted records.
 
