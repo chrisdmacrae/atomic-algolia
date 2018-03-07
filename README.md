@@ -1,8 +1,8 @@
 # Algolia Atomic
-An NPM package for running atomic updates to an Algolia index
+An NPM package for running atomic updates to Algolia indices
 
 ## How it works
-This package runs *atomic* updates to an Algolia Index. **What does that mean?**
+This package runs *atomic* updates to Algolia Indices. **What does that mean?**
 
 Simply put, this package reads your local index, and updates the *new* or *updated* records, while removing deleted records.
 
@@ -74,7 +74,7 @@ atomicalgolia(indexName, indexPath, cb)
 Then call the script from your terminal as follows:
 
 ```
-ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} YOUR_SCRIPT.js
+ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} node YOUR_SCRIPT.js
 ```
 
 #### Using with an Array of Objects
@@ -96,13 +96,13 @@ var cb = function(error, result) {
     console.log(result)
 }
 
-atomicalgolia(indexName, indexPath, cb)
+atomicalgolia(indexName, indexData, cb)
 ```
 
 Then call the script from your terminal as follows:
 
 ```
-ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} YOUR_SCRIPT.js
+ALGOLIA_APP_ID={{ YOUR_APP_ID}} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} node YOUR_SCRIPT.js
 ```
 
 
