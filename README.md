@@ -1,4 +1,5 @@
 # Algolia Atomic
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 An NPM package for running atomic updates to Algolia indices
 
 ## How it works
@@ -131,3 +132,15 @@ ALGOLIA_INDEX_FILE={{ YOUR_INDEX_FILE }}
 `ALGOLIA_INDEX_NAME`: the name of the index you're updating.
 
 `ALGOLIA_INDEX_FILE`: the relative path to your index file from the root of your project.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars2.githubusercontent.com/u/6855186?v=4" width="100px;"/><br /><sub><b>chrisdmacrae</b></sub>](https://github.com/chrisdmacrae)<br />[💬](#question-chrisdmacrae "Answering Questions") [💻](https://github.com/algolia/atomic-algolia/commits?author=chrisdmacrae "Code") [🎨](#design-chrisdmacrae "Design") [📖](https://github.com/algolia/atomic-algolia/commits?author=chrisdmacrae "Documentation") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
