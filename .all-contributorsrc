@@ -20,6 +20,17 @@
         "design",
         "doc"
       ]
+    },
+    {
+      "login": "pixelastic",
+      "name": "Tim Carry",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/283419?v=4",
+      "profile": "http://www.pixelastic.com/",
+      "contributions": [
+        "question",
+        "code",
+        "doc"
+      ]
     }
   ]
 }
