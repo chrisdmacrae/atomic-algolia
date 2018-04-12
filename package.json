@@ -1,12 +1,12 @@
 {
   "name": "atomic-algolia",
   "version": "0.3.14",
-  "description":
-    "An NPM package for running atomic updates to an Algolia index",
+  "description": "An NPM package for running atomic updates to an Algolia index",
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "scripts": {
     "prepublish": "npm run babel",
+    "prepush": "npm run babel",
     "babel": "babel src -d lib",
     "babel:watch": "npm run babel -- --watch",
     "clean": "rimraf lib",
@@ -15,7 +15,10 @@
     "contributors:generate": "all-contributors generate",
     "contributors:check": "all-contributors check"
   },
-  "keywords": ["algolia", "node"],
+  "keywords": [
+    "algolia",
+    "node"
+  ],
   "engines": {
     "node": ">=7.6.0"
   },
@@ -44,6 +47,7 @@
     "babel-runtime": "^6.26.0",
     "eslint": "^4.19.0",
     "eslint-config-prettier": "^2.9.0",
+    "husky": "^0.14.3",
     "prettier": "^1.11.1",
     "source-map-support": "^0.5.4",
     "stylelint": "^9.1.3",
