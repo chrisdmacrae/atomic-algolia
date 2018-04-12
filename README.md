@@ -1,6 +1,9 @@
 # Algolia Atomic
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 An NPM package for running atomic updates to Algolia indices
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg)](#contributors) 
+[![npm](https://img.shields.io/npm/dt/atomic-algolia.svg)](https://www.npmjs.com/package/atomic-algolia) 
+
 
 ## How it works
 This package runs *atomic* updates to Algolia Indices. **What does that mean?**
