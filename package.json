@@ -5,15 +5,15 @@
   "main": "lib/index.js",
   "bin": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run babel",
+    "prepublish": "npx run babel",
     "prepush": "npm run babel",
-    "babel": "babel src -d lib",
-    "babel:watch": "npm run babel -- --watch",
-    "clean": "rimraf lib",
+    "babel": "npx babel src -d lib",
+    "babel:watch": "npx babel -- --watch",
+    "clean": "npx rimraf lib",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate",
-    "contributors:check": "all-contributors check"
+    "contributors:add": "npx all-contributors add",
+    "contributors:generate": "npx all-contributors generate",
+    "contributors:check": "npx all-contributors check"
   },
   "keywords": [
     "algolia",
