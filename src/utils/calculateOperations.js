@@ -1,3 +1,4 @@
+var debug = require('debug')('atomic-algolia:actionAdd')
 var idsFromIndex = require("./idsFromIndex")
 var md5 = require("md5")
 
@@ -13,6 +14,8 @@ module.exports = function calculateOperations(newIndex, oldIndex) {
         oldIndexIds = idsFromIndex(oldIndex)
     }
 
+    debug('New Index IDs: %o', newIndexIds);
+    debug('Old Index IDs: %o', oldIndexIds);
 
     var existingHits = []
     var operations = {ignore: [], update: [], add: newIndexIds, delete: oldIndexIds}
@@ -27,6 +30,12 @@ module.exports = function calculateOperations(newIndex, oldIndex) {
         operations.ignore = findUnchangedHits(existingHits, newIndex, oldIndex)
         operations.update = findChangedHits(existingHits, newIndex, oldIndex)
     }
+
+    debug('Existing Hits: %o', existingHits);
+    debug('Add Operations: %o', operations.add);
+    debug('Delete Operations: %o', operations.delete);
+    debug('Update Operations: %o', operations.update);
+    debug('Ignore Operations: %o', operations.ignore);
 
     return operations
 }
@@ -78,11 +87,18 @@ function compareHitFromIndexes(id, newIndex, oldIndex) {
         return String(hit.objectID) === String(id)
     })
 
+    debug('New hit: %o', newHit);
+    debug('Old hit: %o', oldHit);
+
     if (newHit.length > 0 && oldHit.length > 0 ) {
         var newHitSorted = JSON.stringify(newHit[0], Object.keys(newHit[0]).sort())
         var oldHitSorted = JSON.stringify(oldHit[0], Object.keys(oldHit[0]).sort())
         var newHash = md5(newHitSorted)
         var oldHash = md5(oldHitSorted)
+
+        debug('Comparing new to old:');
+        debug('%o <> %o', newHitSorted, oldHitSorted);
+        debug('%s <> %s', newHash, oldHash);
 
         return newHash !== oldHash
     }
