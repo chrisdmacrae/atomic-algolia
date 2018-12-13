@@ -1,9 +1,7 @@
 {
-    "presets": ["env"],
+    "presets": ["@babel/preset-env"],
     "plugins": [
-      "transform-runtime",
-      "transform-object-rest-spread", 
-      "source-map-support"
+      "@babel/plugin-transform-runtime"
     ]
   }
   
