@@ -3,16 +3,16 @@ module.exports = async function getRemoteIndex(index) {
     try {
         oldIndex = await query(index)
     } catch (err) {
-        // do something...
+        throw err
     }
 
     return oldIndex
 }
 
 function query(index) {
-    return new Promise(function(resolve) { 
+    return new Promise(function(resolve, reject) { 
         index.browse("", {}, function browseDone(err, content, hits) {
-            if (err) throw err
+            if (err) reject(err);
 
             if (!Array.isArray(hits)) {
                 hits = []
