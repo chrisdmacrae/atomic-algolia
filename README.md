@@ -95,7 +95,7 @@ var indexData = [
 ]
 
 var cb = function(error, result) {
-    if (err) throw error
+    if (error) throw error
 
     console.log(result)
 }
