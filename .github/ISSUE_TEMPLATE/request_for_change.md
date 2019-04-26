@@ -45,8 +45,8 @@ In order to .
 ```gherkin
 Scenario:
 Given ,
-Then ,
 When ,
+Then ,
 ```
 
 ## Notes
