@@ -12,9 +12,9 @@ assignees: ""
   Please provide a business/use case for this change.
 
   E.g:
-    As a developer using literal.js,
-    I want literal.js to be built on DOM standards,
-    In order to be awesome.
+    As a developer using this project,
+    I want the project to allow me to use it as a CLI,
+    In order to be able to use it on a CI.
 ->
 ```
 As a ,
