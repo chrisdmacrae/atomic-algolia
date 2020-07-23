@@ -4,13 +4,19 @@
   "description": "An NPM package for running atomic updates to an Algolia index",
   "main": "lib/index.js",
   "bin": "lib/index.js",
+  "files": [
+    "lib/*"
+  ],
   "scripts": {
-    "prepublish": "npm run babel",
-    "prepush": "npm run babel",
+    "prepublish": "npm run build",
+    "prepush": "npm run build",
+    "prepack": "npm run build",
+    "build": "npm run babel",
+    "start": "npm run babel:watch",
     "babel": "npx babel src -d lib",
     "babel:watch": "npx babel -- --watch",
     "clean": "npx rimraf lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "contributors:add": "npx all-contributors add",
     "contributors:generate": "npx all-contributors generate",
     "contributors:check": "npx all-contributors check"
