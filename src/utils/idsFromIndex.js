@@ -7,6 +7,10 @@ module.exports = function idsFromIndex(index) {
     if (hit.objectID !== null && hit.objectID !== undefined) {
         var id = String(hit.objectID)
         return hits.concat(id)
+    } else {
+      debug(`Missing object id, ignored hit: %o`, hit);
+
+      return hits;
     }
   }, []).sort()
 }

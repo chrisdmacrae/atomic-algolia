@@ -1,10 +1,10 @@
+require("dotenv").config();
+
 var actionAdd = require("./utils/actionAdd")
 var actionUpdate = require("./utils/actionUpdate")
 var actionDelete = require("./utils/actionDelete")
 var algoliaSearch = require("algoliasearch")
 var chalk = require("chalk")
-var dotenv = require("dotenv").config()
-var fs = require("fs")
 var getLocalIndex = require("./utils/getLocalIndex")
 var getRemoteIndex = require("./utils/getRemoteIndex")
 var calculateOperations = require("./utils/calculateOperations")
