@@ -11,10 +11,10 @@ module.exports = async function getRemoteIndex(index) {
 
 function query(index) {
     return new Promise(function(resolve, reject) {
-        hits = []; 
+        let hits = []; 
         index.browse("", {}, function browseDone(err, content) {
-            if (err) reject(err);
-            
+            if (err) return reject(err);
+
             content.hits.forEach(function(hit) {
                 hit.objectID = String(hit.objectID)
                 hits.push(hit)
