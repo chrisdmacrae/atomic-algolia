@@ -1,6 +1,6 @@
 {
   "name": "atomic-algolia",
-  "version": "0.3.19",
+  "version": "0.3.20",
   "description": "An NPM package for running atomic updates to an Algolia index",
   "main": "lib/index.js",
   "bin": "lib/index.js",
@@ -43,6 +43,7 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.2.0",
     "algoliasearch": "^4.12.1",
+    "atomic-algolia": "github:swamidass/atomic-algolia",
     "chalk": "^2.3.0",
     "debug": "^4.1.0",
     "dotenv": "^5.0.0",
