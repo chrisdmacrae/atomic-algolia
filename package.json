@@ -42,7 +42,7 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.2.0",
-    "algoliasearch": "^3.24.9",
+    "algoliasearch": "^4.12.1",
     "chalk": "^2.3.0",
     "debug": "^4.1.0",
     "dotenv": "^5.0.0",
