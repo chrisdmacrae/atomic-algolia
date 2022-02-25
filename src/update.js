@@ -72,8 +72,6 @@ module.exports = function update(indexName, indexData, options, cb) {
 
                 // Perform the batch API call
                 if (batchActions.length > 0) {
-                    // Notify client this is coming from this script
-                    client.setExtraHeader("X-FORWARDED-BY", "ATOMIC-ALGOLIA")
                     client.batch(batchActions, function(err, res) {
                         if (err) throw err
 
