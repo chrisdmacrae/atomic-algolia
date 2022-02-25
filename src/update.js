@@ -71,13 +71,11 @@ module.exports = function update(indexName, indexData, options, cb) {
                 var batchActions = [].concat(toAdd, toUpdate, toDelete)
 
                 // Perform the batch API call
-                if (batchActions.length > 0) {
+                if (batchActions.length > 0) 
                     client.multipleBatch(batchActions)
-                      .then(r => cb(null, r) );
-            })
-            .catch(function(err) {
-                cb(err)
-            })
+                      .then(r => cb(null, r) )
+                      
+            }).catch(err => cb(err))
     } catch (err) {
         cb(err)
     }
