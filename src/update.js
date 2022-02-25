@@ -10,6 +10,9 @@ var getRemoteIndex = require("./utils/getRemoteIndex")
 var calculateOperations = require("./utils/calculateOperations")
 var title = "[" + chalk.blue("Algolia") + "]"
 
+
+let headers = {"X-FORWARDED-BY": "ATOMIC-ALGOLIA"};
+
 module.exports = function update(indexName, indexData, options, cb) {
     try {
         if (!indexName)
@@ -24,7 +27,8 @@ module.exports = function update(indexName, indexData, options, cb) {
             
         var client = algoliaSearch(
             process.env.ALGOLIA_APP_ID,
-            process.env.ALGOLIA_ADMIN_KEY
+            process.env.ALGOLIA_ADMIN_KEY,
+            { headers }
         )
 
         var index = client.initIndex(indexName)
