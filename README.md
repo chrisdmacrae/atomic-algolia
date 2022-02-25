@@ -141,9 +141,19 @@ ALGOLIA_INDEX_FILE={{ YOUR_INDEX_FILE }}
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/6855186?v=4" width="100px;"/><br /><sub><b>chrisdmacrae</b></sub>](https://github.com/chrisdmacrae)<br />[💬](#question-chrisdmacrae "Answering Questions") [💻](https://github.com/algolia/atomic-algolia/commits?author=chrisdmacrae "Code") [🎨](#design-chrisdmacrae "Design") [📖](https://github.com/algolia/atomic-algolia/commits?author=chrisdmacrae "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/283419?v=4" width="100px;"/><br /><sub><b>Tim Carry</b></sub>](http://www.pixelastic.com/)<br />[💬](#question-pixelastic "Answering Questions") [💻](https://github.com/algolia/atomic-algolia/commits?author=pixelastic "Code") [📖](https://github.com/algolia/atomic-algolia/commits?author=pixelastic "Documentation") |
-| :---: | :---: |
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/chrisdmacrae"><img src="https://avatars2.githubusercontent.com/u/6855186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chrisdmacrae</b></sub></a><br /><a href="#question-chrisdmacrae" title="Answering Questions">💬</a> <a href="https://github.com/algolia/atomic-algolia/commits?author=chrisdmacrae" title="Code">💻</a> <a href="#design-chrisdmacrae" title="Design">🎨</a> <a href="https://github.com/algolia/atomic-algolia/commits?author=chrisdmacrae" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.pixelastic.com/"><img src="https://avatars2.githubusercontent.com/u/283419?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tim Carry</b></sub></a><br /><a href="#question-pixelastic" title="Answering Questions">💬</a> <a href="https://github.com/algolia/atomic-algolia/commits?author=pixelastic" title="Code">💻</a> <a href="https://github.com/algolia/atomic-algolia/commits?author=pixelastic" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/swamidass"><img src="https://avatars.githubusercontent.com/u/6273919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>swamidass</b></sub></a><br /><a href="https://github.com/algolia/atomic-algolia/issues?q=author%3Aswamidass" title="Bug reports">🐛</a> <a href="https://github.com/algolia/atomic-algolia/commits?author=swamidass" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

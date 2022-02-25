@@ -10,6 +10,9 @@ var getRemoteIndex = require("./utils/getRemoteIndex")
 var calculateOperations = require("./utils/calculateOperations")
 var title = "[" + chalk.blue("Algolia") + "]"
 
+
+let headers = {"X-FORWARDED-BY": "ATOMIC-ALGOLIA"};
+
 module.exports = function update(indexName, indexData, options, cb) {
     try {
         if (!indexName)
@@ -24,7 +27,8 @@ module.exports = function update(indexName, indexData, options, cb) {
             
         var client = algoliaSearch(
             process.env.ALGOLIA_APP_ID,
-            process.env.ALGOLIA_ADMIN_KEY
+            process.env.ALGOLIA_ADMIN_KEY,
+            { headers }
         )
 
         var index = client.initIndex(indexName)
@@ -67,21 +71,11 @@ module.exports = function update(indexName, indexData, options, cb) {
                 var batchActions = [].concat(toAdd, toUpdate, toDelete)
 
                 // Perform the batch API call
-                if (batchActions.length > 0) {
-                    // Notify client this is coming from this script
-                    client.setExtraHeader("X-FORWARDED-BY", "ATOMIC-ALGOLIA")
-                    client.batch(batchActions, function(err, res) {
-                        if (err) throw err
-
-                        cb(null, res)
-                    })
-                } else {
-                    cb(null, {})
-                }
-            })
-            .catch(function(err) {
-                cb(err)
-            })
+                if (batchActions.length > 0) 
+                    client.multipleBatch(batchActions)
+                      .then(r => cb(null, r) )
+                      
+            }).catch(err => cb(err))
     } catch (err) {
         cb(err)
     }
