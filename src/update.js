@@ -72,14 +72,8 @@ module.exports = function update(indexName, indexData, options, cb) {
 
                 // Perform the batch API call
                 if (batchActions.length > 0) {
-                    client.batch(batchActions, function(err, res) {
-                        if (err) throw err
-
-                        cb(null, res)
-                    })
-                } else {
-                    cb(null, {})
-                }
+                    client.multipleBatch(batchActions)
+                      .then(r => cb(null, r) );
             })
             .catch(function(err) {
                 cb(err)
