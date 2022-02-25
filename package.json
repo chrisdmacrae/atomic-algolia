@@ -38,6 +38,7 @@
   "dependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
     "@babel/runtime": "^7.17.2",
     "add": "^2.0.6",
     "algoliasearch": "^4.12.1",
