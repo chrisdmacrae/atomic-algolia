@@ -1,3 +1,5 @@
+var debug = require('debug')('atomic-algolia:idsFromIndex')
+
 module.exports = function idsFromIndex(index) {
   return index.reduce(function(hits, hit) {
       if (hit !== null && hit !== undefined) {
